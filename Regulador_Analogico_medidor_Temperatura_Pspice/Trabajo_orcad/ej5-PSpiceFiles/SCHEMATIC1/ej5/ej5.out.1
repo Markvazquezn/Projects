@@ -1,0 +1,44 @@
+
+**** 06/22/19 13:04:59 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ej5"  [ C:\Ejercicios Orcad\B0_ej5\ej5-PSpiceFiles\SCHEMATIC1\ej5.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ej5.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Marcos\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 100 ns 0 
+-------------$
+ERROR(ORPSIM-16152): Invalid number: Error while converting token 'ns' to double value. Token can be a constant or expression
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source EJ5
+X_U1         0 N00187 V+ V- N00212 uA741
+R_R1         N00180 N00187  1k TC=0,0 
+R_R2         N00187 N00212  2k TC=0,0 
+V_V1         N00180 0  AC 0
++SIN 0 10 20 0 0 0
+
+**** RESUMING ej5.cir ****
+.END
+

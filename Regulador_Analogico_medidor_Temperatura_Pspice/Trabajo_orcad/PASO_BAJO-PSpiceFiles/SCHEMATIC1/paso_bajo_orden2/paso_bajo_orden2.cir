@@ -1,0 +1,19 @@
+** Profile: "SCHEMATIC1-paso_bajo_orden2"  [ C:\Users\Marcos\Desktop\INGENIERÍA\3ºCURSO\1ºCUATRIMESTRE\Electrónica analógica\Trabajo Analogica 19-20\Trabajo_orcad\paso_bajo-pspicefiles\schematic1\paso_bajo_orden2.sim ] 
+
+** Creating circuit file "paso_bajo_orden2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Marcos\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 3ms 0 SKIPBP 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

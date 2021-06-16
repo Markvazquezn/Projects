@@ -1,0 +1,5 @@
+ lib=d:\capture_cis\tools\PSpice\Library\diode.lib, offset=588693, size=221
+ lib=d:\capture_cis\tools\PSpice\Library\diode.lib, offset=458851, size=174
+ lib=d:\capture_cis\tools\PSpice\Library\opamp.lib, offset=96448, size=1161
+ lib=d:\capture_cis\tools\PSpice\Library\opamp.lib, offset=101320, size=1093
+ lib=d:\capture_cis\tools\PSpice\Library\breakout.lib, offset=9106, size=133

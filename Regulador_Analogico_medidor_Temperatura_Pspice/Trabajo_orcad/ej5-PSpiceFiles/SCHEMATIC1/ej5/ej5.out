@@ -1,0 +1,168 @@
+
+**** 06/22/19 13:18:02 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ej5"  [ C:\Ejercicios Orcad\B0_ej5\ej5-PSpiceFiles\SCHEMATIC1\ej5.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ej5.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Marcos\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source EJ5
+X_U1         0 N00187 VCC -VCC N00212 uA741
+R_R1         N00180 N00187  1k TC=0,0 
+R_R2         N00187 N00212  2k TC=0,0 
+V_V1         N00180 0  AC 0
++SIN 0 10 20 0 0 0
+V_V2         VCC 0 15
+V_V3         -VCC 0 -15
+
+**** RESUMING ej5.cir ****
+.END
+
+**** 06/22/19 13:18:02 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ej5"  [ C:\Ejercicios Orcad\B0_ej5\ej5-PSpiceFiles\SCHEMATIC1\ej5.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 06/22/19 13:18:02 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ej5"  [ C:\Ejercicios Orcad\B0_ej5\ej5-PSpiceFiles\SCHEMATIC1\ej5.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 06/22/19 13:18:02 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ej5"  [ C:\Ejercicios Orcad\B0_ej5\ej5-PSpiceFiles\SCHEMATIC1\ej5.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   15.0000  ( -VCC)  -15.0000  (N00180)    0.0000 (N00187) 19.25E-06     
+
+(N00212) 217.3E-06 (X_U1.6)-22.25E-09 (X_U1.7) 222.2E-06 (X_U1.8) 222.2E-06     
+
+(X_U1.9)    0.0000 (X_U1.10)    -.6077                   (X_U1.11)   14.9600    
+
+(X_U1.12)   14.9600                   (X_U1.13)    -.5938                       
+
+(X_U1.14)    -.5938                   (X_U1.53)   14.0000                       
+
+(X_U1.54)  -14.0000                   (X_U1.90) 99.01E-06                       
+
+(X_U1.91)   40.0000                   (X_U1.92)  -40.0000                       
+
+(X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         1.925E-08
+    V_V2        -1.667E-03
+    V_V3         1.667E-03
+    X_U1.vb     -2.225E-13
+    X_U1.vc      1.400E-11
+    X_U1.ve      1.592E-11
+    X_U1.vlim    9.901E-08
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   5.00E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/22/19 13:18:02 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ej5"  [ C:\Ejercicios Orcad\B0_ej5\ej5-PSpiceFiles\SCHEMATIC1\ej5.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .23
+

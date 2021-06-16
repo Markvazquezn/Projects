@@ -1,0 +1,217 @@
+
+**** 04/05/20 18:09:36 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulacion_mayor_0.7"  [ D:\TRABAJO ELECTRONICA 19-20\Circuito proteccion\circuito proteccion-pspicefiles\sc
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "simulacion_mayor_0.7.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Capture_Cis\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000u 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source CIRCUITO PROTECCION
+D_D1         N000500 N00201 D1N5817 
+D_D2         N00201 N00267 D1N5817 
+R_R1         N00194 N00201  100 TC=0,0 
+R_R2         0 N00201  1k TC=0,0 
+V_V2         N00267 0 4.77
+V_V3         N000500 0 0.26
+V_V4         N00194 0  AC 0
++SIN 0 7 10 0 0 0
+V_V5         N01599 0 12
+X_U1         0 N01603 VCC -VCC N01620 uA741
+X_U2         0 N01646 VCC -VCC N01663 uA741
+R_R3         N01603 N01620  4.7k TC=0,0 
+R_R4         N01620 N01646  1k TC=0,0 
+R_R5         N01646 N01663  1k TC=0,0 
+R_R6         N01599 N015540  10k TC=0,0 
+R_R7         N015540 N01603  1k TC=0,0 
+V_V6         VCC 0 12
+V_V7         -VCC 0 -12
+
+**** RESUMING simulacion_mayor_0.7.cir ****
+.END
+
+**** 04/05/20 18:09:36 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulacion_mayor_0.7"  [ D:\TRABAJO ELECTRONICA 19-20\Circuito proteccion\circuito proteccion-pspicefiles\sc
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N5817         X_U1.dx         X_U1.dy         X_U2.dx         
+          IS    2.835000E-06  800.000000E-18  800.000000E-18  800.000000E-18 
+         ISR   37.750000E-06                                                 
+         IKF     .3227                                                       
+          RS     .04712         1               1.000000E-03    1            
+         CJO  472.400000E-12                   10.000000E-12                 
+          VJ     .75                                                         
+           M     .6215                                                       
+         XTI    0                                                            
+
+
+               X_U2.dy         
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+**** 04/05/20 18:09:36 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulacion_mayor_0.7"  [ D:\TRABAJO ELECTRONICA 19-20\Circuito proteccion\circuito proteccion-pspicefiles\sc
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         X_U2.qx         
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75         
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 04/05/20 18:09:36 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulacion_mayor_0.7"  [ D:\TRABAJO ELECTRONICA 19-20\Circuito proteccion\circuito proteccion-pspicefiles\sc
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   12.0000  ( -VCC)  -12.0000  (N00194)    0.0000 (N00201)     .1180     
+
+(N00267)    4.7700 (N01599)   12.0000 (N01603) 49.67E-06 (N01620)   -5.1268     
+
+(N01646)-10.33E-06 (N01663)    5.1269 (X_U1.6) 572.3E-06 (X_U1.7)   -5.4377     
+
+(X_U1.8)   -5.4377 (X_U1.9)    0.0000 (X_U2.6)-556.7E-06 (X_U2.7)    5.3832     
+
+(X_U2.8)    5.3832 (X_U2.9)    0.0000 (N000500)     .2600                       
+
+(N015540)    1.0910                   (X_U1.10)    -.6076                       
+
+(X_U1.11)   11.9600                   (X_U1.12)   11.9600                       
+
+(X_U1.13)    -.5938                   (X_U1.14)    -.5938                       
+
+(X_U1.53)   11.0000                   (X_U1.54)  -11.0000                       
+
+(X_U1.90)   -6.2176                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                       
+
+(X_U2.10)    -.6077                   (X_U2.11)   11.9600                       
+
+(X_U2.12)   11.9600                   (X_U2.13)    -.5938                       
+
+(X_U2.14)    -.5938                   (X_U2.53)   11.0000                       
+
+(X_U2.54)  -11.0000                   (X_U2.90)    5.1269                       
+
+(X_U2.91)   40.0000                   (X_U2.92)  -40.0000                       
+
+(X_U2.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -1.316E-04
+    V_V3        -1.166E-03
+    V_V4         1.180E-03
+    V_V5        -1.091E-03
+    V_V6        -2.673E-03
+    V_V7         2.673E-03
+    X_U1.vb      5.723E-09
+    X_U1.vc      1.613E-11
+    X_U1.ve      7.380E-12
+    X_U1.vlim   -6.218E-03
+    X_U1.vlp    -4.622E-11
+    X_U1.vln    -3.379E-11
+    X_U2.vb     -5.567E-09
+    X_U2.vc      5.874E-12
+    X_U2.ve      1.763E-11
+    X_U2.vlim    5.127E-03
+    X_U2.vlp    -3.487E-11
+    X_U2.vln    -4.513E-11
+
+    TOTAL POWER DISSIPATION   7.82E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 04/05/20 18:09:36 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulacion_mayor_0.7"  [ D:\TRABAJO ELECTRONICA 19-20\Circuito proteccion\circuito proteccion-pspicefiles\sc
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .06
+
